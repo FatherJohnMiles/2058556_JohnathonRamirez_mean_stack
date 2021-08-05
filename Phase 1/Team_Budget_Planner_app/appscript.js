@@ -9,8 +9,6 @@ const addto = e => {
     }
     
     localStorage.setItem('newdata', JSON.stringify(newdata));
-    displayData();
-    e.preventDefault();
 }
 
 function dispData()
@@ -41,5 +39,3 @@ function dispData()
 
 
 }
-
-    displayData();
