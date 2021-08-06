@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, intital-scale=1">
+<script src="Blogging_Script.js"></script>
+
+<title>Simply Blogging</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+
+
+</style>
+
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: aqua;">
+    <div class="container-fluid">
+    
+    <a href="#Home" class="navbar-brand">Simply Blogging</a>
+    
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+                <li class="nav-item">
+                    <a href="#About" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Contact" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item" >
+                    <a href="#Blog" class="nav-link">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Home" class="nav-link">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+        <div>
+        <h2 style="text-align:center;">Add A Blog</h2>
+        </div>
+<form>
+     <div class="container">
+                <div class="form-group">
+                    <label for="Mtexbox" class=form-label>Title</label>
+                    <input type="text" class="form-control" id="titletext" placeholder="Enter Blog Title">
+                </div>
+
+                <div class="form-group">
+                    <label for="Mtexbox" class=form-label>Blog Message</label>
+                    <textarea class="form-control" id="dmtext" placeholder="Enter Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Mtexbox" class=form-label>Image</label>
+                    <input type="url" class="form-control" id="imgtext" placeholder="Add Image URL">
+                </div>
+                <div class="form-group">
+                    <botton type="botton" class="btn btn-success" onclick="addblog()">Add Blog</button>
+                </div>
+    </div>
+    
+    </div>
+</form>
+
+<hr>
+
+<div id="main">
+    
+</div>
+<footer style="background-color: aqua;">
+            <div class="container-fluid">
+                <p style="font-size: xx-large; color: black;">Scroll for more Blogs</p>
+            </div>
+</footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
