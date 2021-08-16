@@ -14,11 +14,11 @@ arraySize = cat.length;
             let plan = document.getElementById("updated") /////loop the array into table
             for (let i = 0; i < arraySize; i++) {
                 console.log("loop "+i);
-                let n_row = plan.insertRow(-1);
-                n_row.innerHTML =  "<td>" + cat[i].cl + "</td>" + "<td>" + cat[i].prj+ "</td>" + "<td> $" + cat[i].budget + "</td>";
-                plan.appendChild(n_row);
+                let b_row = plan.insertRow(-1);
+                b_row.innerHTML =  "<td>" + cat[i].cl + "</td>" + "<td>" + cat[i].prj+ "</td>" + "<td> $" + cat[i].budget + "</td>";
+                plan.appendChild(b_row);
 
                 total = total + Number(cat[i].budget)
                 
             }
-        document.write("<div><h3>Total Cost"+total+"<h3></div>")
+        document.write("<div><h3>Total Cost  "  +total+ "<h3></div>") //Displays the total cost of project

@@ -5,7 +5,7 @@ var arraySize = 0;
 function addto () {
     
 
-        var new_client = document.getElementById('ClientN').value;     
+        var new_client = document.getElementById('ClientN').value;     // takes in input and creates objects
         var new_project = document.getElementById('ProjectN').value;
         var new_budget = document.getElementById('NBudget').value;
 
@@ -21,7 +21,7 @@ function addto () {
         }
 
 
-        data.push(enteredbudget);
+        data.push(enteredbudget);            ///adds to the array
         arraySize++;
         console.log("the size is" +arraySize);
         sessionStorage.setItem("data", JSON.stringify(data));
