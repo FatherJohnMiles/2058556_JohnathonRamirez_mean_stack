@@ -1,0 +1,14 @@
+
+<div>
+    <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
+
+        Username: <input type="text"  name="username" ngModel required/><br/>
+        Password: <input type="password"  name= "password" ngModel required/><br/>
+        <br/>
+        <input type="submit" value="Login" [disabled]="loginRef.invalid"/>
+        
+        
+    </form>
+
+    {{msg}}
+</div>

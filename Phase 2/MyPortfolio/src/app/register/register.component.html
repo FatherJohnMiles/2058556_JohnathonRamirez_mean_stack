@@ -1,0 +1,14 @@
+
+<div>
+    <form #signupRef="ngForm" (ngSubmit)="signupUser(signupRef)">
+        First Name: <input type="text" name="fname" ngModel required/><br/>
+        Last Name: <input type="text" name="lname" ngModel required/><br/>
+        Username: <input type="text"  name="username" ngModel required/><br/>
+        Password: <input type="password"  name= "password" ngModel required/><br/>
+        <br/>
+        <input type="submit" value="Sign Up" [disabled]="signupRef.invalid"/>
+        
+    </form>
+
+
+</div>
