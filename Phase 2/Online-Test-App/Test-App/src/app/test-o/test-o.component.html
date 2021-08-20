@@ -1,0 +1,19 @@
+<div>
+
+    <h2>Trivia Quiz</h2>
+
+    <input type="button" value="Click to begin" (click)="loadTest()">
+
+    <form>
+        <div *ngFor="let t of tData">
+            <p>{{t.question}}</p>
+            <input type="radio" name={{t.question}} value={{t.answer1}}/>{{t.answer1}}<br/>
+            <input type="radio" name={{t.question}} value={{t.answer2}}/>{{t.answer2}}<br/>
+            <input type="radio" name={{t.question}}  value={{t.rightanswer}}/>{{t.rightanswer}}<br/>
+            <input type="submit" value="Submit Answer">
+        </div>
+       
+    </form>
+    
+</div>
+ 

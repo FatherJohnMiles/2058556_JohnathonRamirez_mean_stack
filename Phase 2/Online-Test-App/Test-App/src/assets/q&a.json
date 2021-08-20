@@ -1,0 +1,14 @@
+[
+
+    {"question":"How many moons does Jupiter have?", "answer1":"2","answer2":"13","rightanswer":"79"},
+    {"question":"In what you were the first Air Jordan sneakers released?", "answer1":"1992","answer2":"1983","rightanswer":"1984"},
+    {"question":"Where does milk come from?", "rightanswer":"Cow","answer2":"ocean","answer1":"sky"},
+    {"question":"Which country consumes the most chocolate per capita?", "answer1":"U.S.A","rightanswer":"Switzerland","answer2":"Japan"},
+    {"question":"What was the first toy to be adverstised on TV?", "answer1":"Slinky","rightanswer":"Mr.Potato Head","answer2":"Yo-yo"},
+    {"question":"Which of Shakespeare's plays is the longest?", "rightanswer":"Hamlet","answer2":"Romeo & Juliet","answer1":"The Tempest"},
+    {"question":"What is the tallest breed of dog in the world?", "rightanswer":"The Great Dane","answer2":"Yorkie","answer1":"Siberian Mastiff"},
+    {"question":"How many ribs are in the human body?", "answer1":"16","answer2":"8","rightanswer":"24"},
+    {"question":"What is the smallest ocean in the world?", "answer1":"Indian","rightanswer":"Arctic","answer2":"Pacific"},
+    {"question":"How many hearts does and octopus have?", "rightanswer":"3","answer2":"2","answer1":"1"}
+
+]
