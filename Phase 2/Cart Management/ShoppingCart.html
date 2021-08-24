@@ -7,7 +7,6 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, intital-scale=1">
-<script src="Blogging_Script.js"></script>
 
 <title>Cart</title>
 
@@ -37,7 +36,7 @@
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-4 mb-lg-0">
                 <li class="nav-item">
-                    <a href="Checkout.html" class="nav-link"> Checkout</a>
+                    <a href="Checkoutcart.html" class="nav-link"> Checkout</a>
                 </li>
             </ul>
         </div>
@@ -45,36 +44,39 @@
 </nav>
 <h3>My Shopping Cart</h3>
 
-
+<div class= "items"></div>
 <div class="card">
     <h3>Green Socks</h3>
     <p class="price">$2.00</p>
-    <p><botton type="botton" class="btn btn-success" onclick="additem()">Add to Cart</button></p>
+    <p><botton type="botton" class="btn btn-success" onclick="additem('socks', 2.00)">Add to Cart</button></p>
 </div>
 
 <div class="card">
     <h3>Green Sticker</h3>
     <p class="price">$1.00</p>
-    <p><botton type="botton" class="btn btn-success" onclick="additem()">Add to Cart</button></p>
+    <p><botton type="botton" class="btn btn-success"   onclick="additem('sticker',1.00)">Add to Cart</button></p>
 </div>
 
 <div class="card">
     <h3>Green pillow</h3>
     <p class="price">$54.00</p>
-    <p><botton type="botton" class="btn btn-success" onclick="additem()">Add to Cart</button></p>
+    <p><botton type="botton" class="btn btn-success" onclick="additem('pillow',54.00)">Add to Cart</button></p>
 </div>
 
 <div class="card">
     <h3>Green brush</h3>
     <p class="price">$9.00</p>
-    <p><botton type="botton" class="btn btn-success" onclick="additem()">Add to Cart</button></p>
+    <p><botton type="botton" class="btn btn-success" onclick="additem('brush', 9.00)">Add to Cart</button></p>
 </div>
 
 
+</div>
+<ul id="list"></ul>
 
-
+<a href="Checkoutcart.html">Check Out</a>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="shoppingcart.js"></script>
 </html>

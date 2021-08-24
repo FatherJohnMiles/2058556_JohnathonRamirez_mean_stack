@@ -1,35 +1,71 @@
-interface myitems {
 
-    price: number;
-    productname: any;
 
-        //constructor(public productname:any, public price: number){
+let itemcart = [];
 
-            //this.productname = productname;
-            //this.price = price;
 
-            //}
+function additem(productname:string, price:number) {
 
-            // dis(): void {
-            //     console.log(" Name of product is " +this.productname);
-            //     console.log(" Price of product is " +this.price);
-            // }
-}
 
-let socks: myitems = {productname:"Green Socks", price: 2.00};
-let sticker: myitems = {productname:"Green Sticker", price: 1.00};
-let pillow: myitems = {productname:"Green Pillow", price: 54.00};
-let brush: myitems = {productname:"Green Brush", price: 9.00};
+    
+        itemcart.push({productname,price});
+            savecart();
+            console.log(itemcart.length)
+            console.log(itemcart)
+            
+    }
+
+
+
+    function savecart(){
+        let shoppingCart = JSON.stringify(itemcart)
+        sessionStorage.setItem("shoppingCart", shoppingCart)
+
+
+    }
+
+    let checkoutcart: any
+
+    function newcart() {
+
+        let mycart = sessionStorage.getItem("shoppingCart")
+
+        checkoutcart = JSON.parse(mycart)
+        console.log(checkoutcart)
         
+    }
 
-        // let sticker = new myitems("Green Sticker", 1.00);
-        // let pillow = new myitems("Green Pillow", 54.00);
-        // let brush = new myitems("Green Brush", 9.00);
+        document.onreadystatechange = function () {
+            if(document.readyState === "complete"){
+            newcart();
+            }
+        }
 
-        // socks.dis();
-        // sticker.dis();
-        // pillow.dis();
-        // brush.dis();
+        // let itemq ={}
+        // for(let i = 0; i < checkoutcart.length; i++){
+        //     itemq[checkoutcart[i]] = 1 + (itemq[checkoutcart[i]] || 0);
+        // }
 
+        // let li = '';
+        // for (let ct in itemq) {
+        //     li += '<li>' + ct + 'there are ' + itemq[ct] + '</li>';
+        // }
 
-//document.write("<div><h3>Cart Size  "  +total+ "<h3></div>")
+        // document.getElementById('list').innerHTML = li;
+        
+  function displaycart() {
+
+    let total:any = 0;
+    let checkingout = document.getElementById("mycart") as HTMLTableElement
+    for (let i = 0; i < checkoutcart.lengh; i++){
+        console.log("loop" +i);
+        let c_row = checkingout.insertRow(-1);
+        c_row.innerHTML =  "<td>"+ checkoutcart[i].productname +"</td>" + "<td>"+checkoutcart[i].price+"</td>";
+                    
+        
+            checkingout.appendChild(c_row);
+
+        total = total + Number(checkoutcart[i].price)
+
+    }
+    document.write("<div><h3>Cart Size  "  +total+ "<h3></div>")
+  }
