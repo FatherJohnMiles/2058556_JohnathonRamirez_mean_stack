@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+        body{
+            padding:5px;
+            margin:10;
+            display:flex;
+            justify-content: center;
+        }
+    
+        #messagesText {
+          width: 80%;
+          max-width: 1200px;
+          list-style-type: none;
+        }
+    
+        #messagesText div {
+          background-color:blanchedalmond;
+          padding: 5px;
+        }
+    
+        #messagesText div:nth-child(2n) {
+          background-color:blanchedalmond;
+        }
+    
+        #message-sender {
+          position: fixed;
+          padding-bottom: 30px;
+          bottom: 0;
+          background-color:blanchedalmond;
+          max-width: 1200px;
+          width: 80%;
+          display: flex;
+        }
+    
+        #message-text {
+          flex-grow: 1;
+        }
+        </style>
+</head>
+<body>
+    <ul id="messagesText"></ul>
+    <form id="message-sender" action="">
+        <input type="text" id="message-text">
+        <button type="submit" id="send-message">Send</button>
+
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+    
+        const socket = io();
+        const form = document.getElementById("message-sender");
+        const input = document.getElementById("message-text")
+        const messagetext = document.getElementById("messagesText")
+
+        form.addEventListener("submit", function(e) {
+
+            e.preventDefault();
+            if(input.value) {
+                socket.emit("new message", input.value)
+                input.value = ""
+            }
+        })
+
+
+        socket.on("new message", function(msg)   {
+            const item = document.createElement("li")
+            item.textContent = msg;
+            messagesText.appendChild(item);
+
+        })
+
+        socket.on("new message",(msg)=> {
+            console.log(msg);
+        })
+    socket.on("message",(msg)=> {
+            console.log(msg);
+        })
+    
+    </script>
+</body>
+</html>
